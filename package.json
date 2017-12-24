@@ -1,20 +1,29 @@
 {
   "name": "json-superstring",
   "description": "Fast, safe JSON stringification.",
-  "version": "1.0.0",
-  "dependencies": {
-  },
+  "version": "2.0.0",
   "devDependencies": {
     "chai": "~3.5.0",
-    "istanbul": "~0.4.2",
-    "mocha": "~2.4.5"
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "fast-safe-stringify": "^1.2.1",
+    "json-stringify-safe": "^5.0.1",
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.0",
+    "radargun": "^1.0.0",
+    "safe-json-stringify": "^1.0.4"
   },
   "keywords": [
     "json",
     "stringify",
     "safe",
     "circular",
-    "references"
+    "references",
+    "merge",
+    "assign"
   ],
   "main": "./lib",
   "private": false,
@@ -23,7 +32,8 @@
     "url": "https://github.com/dsfields/json-superstring"
   },
   "scripts": {
+    "bench": "radargun ./benchmark/**/*.bench.js",
     "lint": "eslint ./**/*.js",
-    "test": "NODE_ENV=test istanbul cover _mocha tests/unit/**/*.js"
+    "test": "NODE_ENV=test nyc --reporter=lcov  --reporter=text mocha --recursive ./test/unit"
   }
 }

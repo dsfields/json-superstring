@@ -1,8 +1,11 @@
+.editorconfig
+.eslintignore
 .eslintrc
 .git
 .gitignore
 .idea
 .npmrc
+.nyc_output
 .travis.yml
 .istanbul.yml
 coverage
@@ -11,4 +14,6 @@ NOTES.md
 CONTRIBUTING.md
 CHANGELONG.md
 npm-debug.log
-tests
+test
+docs
+example
