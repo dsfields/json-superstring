@@ -62,7 +62,7 @@ There are a number of other safe JSON stringifiers out there, and they all provi
 
 [*] Does not check for circular references when calling an object's `toJSON()` method.
 
-[**] While `safe-json-stringify` performs circular reference checks, it marks all duplicate object references in a JSON object as `[Circular]` regardless if whether or not they are actual circular references.
+[**] While `safe-json-stringify` performs circular reference checks, it marks all duplicate object references in a JSON object as `[Circular]` regardless of whether they are actual circular references.
 
 ## Performance
 
