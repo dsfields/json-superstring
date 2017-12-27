@@ -1,7 +1,7 @@
 {
   "name": "json-superstring",
   "description": "Fast, safe JSON stringification.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "devDependencies": {
     "chai": "~3.5.0",
     "eslint": "^4.9.0",
@@ -13,7 +13,7 @@
     "json-stringify-safe": "^5.0.1",
     "mocha": "^3.2.0",
     "nyc": "^10.2.0",
-    "radargun": "^1.0.0",
+    "radargun": "^1.0.1",
     "safe-json-stringify": "^1.0.4"
   },
   "keywords": [
@@ -33,6 +33,10 @@
   },
   "scripts": {
     "bench": "radargun ./benchmark/**/*.bench.js",
+    "bench:circular": "radargun ./benchmark/circular.bench.js",
+    "bench:deeply-nested": "radargun ./benchmark/deeply-nested.bench.js",
+    "bench:merge": "radargun ./benchmark/merge.bench.js",
+    "bench:throws": "radargun ./benchmark/throws.bench.js",
     "lint": "eslint ./**/*.js",
     "test": "NODE_ENV=test nyc --reporter=lcov  --reporter=text mocha --recursive ./test/unit"
   }
