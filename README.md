@@ -95,7 +95,7 @@ Performance metrics should always be taken with a healthy level of skepticism.  
 
 Moreover, not all software provides the same functionality.  As demonstrated in the [Comparison](#comparison) table above, that is the case with `json-superstring`, and other safe JSON stringifiers.
 
-The goal here is to show that `json-superstring`'s performance is comparable with other libraries while providing broader set of features.
+The goal here is to show that `json-superstring`'s performance is comparable with other libraries while providing a broader set of features.
 
 Benchmark reports are generated using [`radargun`](https://www.npmjs.com/package/radargun), and built using data from 1 million runs of each utility.
 
